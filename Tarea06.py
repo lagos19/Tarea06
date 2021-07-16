@@ -1,0 +1,51 @@
+def menu():
+    print("¡Bienvenido!")
+    print("")
+    print("App de operaciones metematicas.")
+    print("cómo ser: Division entre dos numeros, Calcular el area de un Triangulo y Calcular el area de un cuadrado.")
+    print("")
+    print("En el siguiente menú, elija la operacion de su preferencia")
+    print("")
+    print("1. Division de dos numeros")
+    print("2. Area del triangulo")
+    print("3. Area del cuadrado")
+    print("4. Salir")
+    op = input ("Escriba el numero de la opción que prefiere:")
+    op = int(op)
+    if op==1: Division()
+    elif op==2: Area_del_triangulo()
+    elif op==3: Area_del_cuadrado()
+    else: exit()
+
+def Division():
+    print("")
+    print ("Division de dos numeros")
+    num1 = input("Por favor, ingrese el primer numero: ")
+    num2 = input("Por favor, Ingrese el segundo numero: ")
+    print("")
+    num1 = float(num1)
+    num2 = float(num2)
+    print ("El resultado de la division es: ", num1/num2)
+    print("")
+    menu()
+
+def Area_del_triangulo():
+    print("Area del triangulo")
+    print("")
+    print ("Para calcular el area de un triangulo, necesitamos conocer el valor de su base y el valor su altura")
+    base=input("Por favor, ingrese el valor de la base del triangulo:")
+    altura=input("Por favor, ingrese el valor de la altura del triangulo: ")
+    area=int (base) * int (altura) / 2.0
+    print ("el resultado es: " + str (area))
+    print("")
+    menu()
+    
+def Area_del_cuadrado():
+    print("Area del cuadrado")
+    print("")
+    a=float(input("Por favor, ingrese el lado del cuadrado:\n"))
+    area=a*a
+    print("El area del cuadrado es:", (str(area)))
+    print("")
+    menu()
+menu()
